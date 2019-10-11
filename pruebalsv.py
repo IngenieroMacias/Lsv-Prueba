@@ -1,12 +1,6 @@
 class GFG:
-
-#- n: an integer, the number of rows and columns in the board 
-#- k: an integer, the number of obstacles on the board 
-#- x: integer, the row number of the queen's position 
-#- y: integer, the column number of the queen's position 
-#- obstacles x y y: a two dimensional array of integers where each element is an array of 2 integers, the row and column of an obstacle
-
-
+	
+    
     def numberofPosition(self, n, k, x, y, obstPosx, obstPosy):
         d11 = min(x-1, y-1)
         d12 = min(n-x, n-y)
@@ -18,7 +12,7 @@ class GFG:
         c1 = x-1
         c2 = n-x
 	
-
+	
         for i in range(0, k):
             if (x > obstPosx[i] and y > obstPosy[i] and x-obstPosx[i] == y-obstPosy[i]):
                 d11 = min(d11, x-obstPosx[i]-1)
@@ -47,13 +41,13 @@ class GFG:
         return d11 + d12 + d21 + d22 + r1 + r2 + c1 + c2
 	
 
-n = 8  # Tamaño del Board
-k = 1 # numeros de obstaculos 
-Qposx = 4 # Posicion x  de la reina
-Qposy = 4 # Posicion y de la reina
-obstPosx = [3] # Obstaculo x 
-obstPosy = [5] # Obstaculo y
-# se instancia la clase
+n = 8 # Tamaño del tablero
+k = 1 # numero de obstaculos
+Qposx = 4 #Posicion de la reina x
+Qposy = 4 # Posicion de la reina y
+obstPosx = [3] # posicion de obstaculos x
+obstPosy = [5] # y posicion de obstaculos y
+
 # se instancia la clase
 claseCFG = GFG()
 print('POSICIÓN')
