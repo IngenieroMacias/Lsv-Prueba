@@ -1,6 +1,4 @@
 class GFG:
-	
-    
     def numberofPosition(self, n, k, x, y, obstPosx, obstPosy):
         d11 = min(x-1, y-1)
         d12 = min(n-x, n-y)
@@ -11,7 +9,6 @@ class GFG:
         r2 = n-y
         c1 = x-1
         c2 = n-x
-	
 	
         for i in range(0, k):
             if (x > obstPosx[i] and y > obstPosy[i] and x-obstPosx[i] == y-obstPosy[i]):
